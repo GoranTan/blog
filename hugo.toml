@@ -1,0 +1,12 @@
+baseURL = 'https://gorantan.github.io/'
+theme = 'FixIt'
+languageCode = 'en-us'
+title = "Goran's Blog"
+defaultContentLanguage = 'zh-cn'
+[markup]
+  _merge = "shallow"
+[outputs]
+  _merge = "shallow"
+[taxonomies]
+  _merge = "shallow"
+pageStyle = "custom"

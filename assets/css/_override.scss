@@ -1,0 +1,27 @@
+// ==============================
+// Override Variables
+// 覆盖变量
+// ==============================
+// Custom font 
+
+// Override global font family
+//以My-Blog为根目录
+@font-face {
+  font-family: xgw-wenkai;
+  src: url('../font/LXGWWenKaiGBScreen.ttf') format("ttf");
+  font-display: swap;
+}
+//以assets为根目录
+@font-face {
+  font-family: yinbi2;
+  src: url('../font/正心格硬笔楷书简.ttf')format("ttf");
+  font-display: swap;
+}
+//以myblog（cmd下的目录）为根目录
+@font-face {
+  font-family: yinbi1;
+  src: url('../font/瑞美加张清平硬笔楷书.ttf')format("ttf");
+  font-display: swap;
+}
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+$global-font-family: 'LXGW WenKai', yinbi1, yinbi2, sans-serif!important;
