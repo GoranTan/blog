@@ -26,7 +26,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.BLOGTOKEN }}
+          github_token: ${{ secrets.deploytoken }}
           external_repository: goran/goran.github.io
           publish_dir: ./public
           publish_branch: main
