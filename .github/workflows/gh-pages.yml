@@ -27,7 +27,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{secrets.BLOGTOKEN}}
-          external_repository: goran/goran.github.io
+          external_repository: gorantan/gorantan.github.io
           publish_dir: ./public
           publish_branch: main
           # 由于不确定是否有自己的域名且博客目前跑在localhost:1313下，这里先删除cname设置
