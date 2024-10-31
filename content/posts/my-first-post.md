@@ -119,6 +119,6 @@ devsidecar是一个github的开源项目，可以实现：dns优选，请求拦�
 <!-- Hugo 官方提供了一些 shortcodes 短代码，其中就包含插入图片的短代码 figure
 <center>{{<figure src="../assets/content.png" width="50%" title="这是一个测试图片，位于assets文件夹下">}}</center> -->
 
-<center>{{<figure src="../assets/content.png" width="100%" title="截图">}}</center>
+<center>{{<figure src="../assets/content.png" width="100%" title="原文截图">}}</center>
 
-123
+<center>{{<figure src="../assets/OIP-C.jfif" width="100%" title="测试">}}</center>
