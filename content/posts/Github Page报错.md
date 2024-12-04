@@ -122,5 +122,6 @@ git config - - remove - section submodule.themes/hugo - theme - reimu
 git config - - remove - section submodule.themes/hugo - theme - stack
 ```
 
-使用`git push - - force`将修改后的历史记录推送到远程仓库，这会覆盖远程仓库的现有历史记录。
+使用`git push - - force`将修改后的历史记录推送到远程仓库。
 
+**成功解决**

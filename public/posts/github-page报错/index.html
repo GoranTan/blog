@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>解决Error:fatal:No Url Found for Submodule Path &#39;Public&#39; in .Gitmodules.使用github Page部署失败。 - Goran&#39;s Blog</title><meta name="author" content="Goran">
+<meta name="description" content="解决Error: fatal: No url found for submodule path &lsquo;public&rsquo; in .gitmodules：使用github page部署失败。使用Github page部署博客，push之后在仓库发生报错，GitHub部署失败，查看details：Error: fatal: No url found for submodule path &#39;public&#39; in .gitmodules，发现是.gitmodules的错误。
+"><meta name="keywords" content='Github'>
+  <meta itemprop="name" content="解决Error:fatal:No url found for submodule path &#39;public&#39; in .gitmodules.使用github page部署失败。">
+  <meta itemprop="description" content="解决Error: fatal: No url found for submodule path ‘public’ in .gitmodules：使用github page部署失败。使用Github page部署博客，push之后在仓库发生报错，GitHub部署失败，查看details：Error: fatal: No url found for submodule path &#39;public&#39; in .gitmodules，发现是.gitmodules的错误。">
+  <meta itemprop="datePublished" content="2024-12-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="269">
+  <meta itemprop="keywords" content="Github"><meta property="og:url" content="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/">
+  <meta property="og:site_name" content="Goran&#39;s Blog">
+  <meta property="og:title" content="解决Error:fatal:No url found for submodule path &#39;public&#39; in .gitmodules.使用github page部署失败。">
+  <meta property="og:description" content="解决Error: fatal: No url found for submodule path ‘public’ in .gitmodules：使用github page部署失败。使用Github page部署博客，push之后在仓库发生报错，GitHub部署失败，查看details：Error: fatal: No url found for submodule path &#39;public&#39; in .gitmodules，发现是.gitmodules的错误。">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-04T00:00:00+00:00">
+    <meta property="article:tag" content="Github">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="解决Error:fatal:No url found for submodule path &#39;public&#39; in .gitmodules.使用github page部署失败。">
+  <meta name="twitter:description" content="解决Error: fatal: No url found for submodule path ‘public’ in .gitmodules：使用github page部署失败。使用Github page部署博客，push之后在仓库发生报错，GitHub部署失败，查看details：Error: fatal: No url found for submodule path &#39;public&#39; in .gitmodules，发现是.gitmodules的错误。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/" title="解决Error:fatal:No url found for submodule path &#39;public&#39; in .gitmodules.使用github page部署失败。 - Goran&#39;s Blog" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" title="hugo的使用" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/index.md" title="解决Error:fatal:No url found for submodule path 'public' in .gitmodules.使用github page部署失败。 - Goran's Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "解决Error:fatal:No url found for submodule path 'public' in .gitmodules.使用github page部署失败。",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/github-page%E6%8A%A5%E9%94%99\/"
+    },"genre": "posts","keywords": "Github","wordcount":  269 ,
+    "url": "http:\/\/localhost:1313\/posts\/github-page%E6%8A%A5%E9%94%99\/","datePublished": "2024-12-04T00:00:00+00:00","dateModified": "2024-12-04T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Goran"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>解决Error:fatal:No Url Found for Submodule Path &#39;Public&#39; in .Gitmodules.使用github Page部署失败。</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/GoranTan" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png" alt="Goran" data-title="Goran" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;Goran</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/code/" class="post-category" title="分类 - Code"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Code</a></span></div><div class="post-meta-line"><span title="发布于 2024-12-04 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-12-04">2024-12-04</time></span>&nbsp;<span title="269 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
+    </div><div class="featured-image"><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102529533.jpg" alt="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102529533.jpg" data-title="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102529533.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></div><div class="content" id="content"><h2 id="解决error-fatal-no-url-found-for-submodule-path-public-in-gitmodules使用github-page部署失败" class="heading-element"><span>解决Error: fatal: No url found for submodule path &lsquo;public&rsquo; in .gitmodules：使用github page部署失败。</span>
+  <a href="#%e8%a7%a3%e5%86%b3error-fatal-no-url-found-for-submodule-path-public-in-gitmodules%e4%bd%bf%e7%94%a8github-page%e9%83%a8%e7%bd%b2%e5%a4%b1%e8%b4%a5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>使用Github page部署博客，push之后在仓库发生报错，GitHub部署失败，查看details：<code>Error: fatal: No url found for submodule path 'public' in .gitmodules</code>，发现是.gitmodules的错误。</p>
+<p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114907288.png" alt="image-20241204114907255" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114907288.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114907288.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114907288.png?size=large 2x" data-title="image-20241204114907255" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114842512.png" alt="image-20241204114842445" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114842512.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114842512.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114842512.png?size=large 2x" data-title="image-20241204114842445" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>查看本地的.gitmodules只有三行代码，且path和url都没有问题。并且本地没有任何跟public有关的.gitmodules，找遍了其他配置文件都没看到。在网上的解决方法是更新submudule，无效，报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule init
+</span></span><span class="line"><span class="cl">git submodule update</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看状态，依旧报错</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule status</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115642989.png" alt="image-20241204115642958" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115642989.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115642989.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115642989.png?size=large 2x" data-title="image-20241204115642958" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>最后参考：<a href="https://www.fordece.cn/posts/%e5%90%8c%e6%ad%a5%e5%ad%90%e6%a8%a1%e5%9d%97%e6%97%b6%e5%87%ba%e7%8e%b0gitmodules%e9%87%8c%e4%b8%8d%e5%ad%98%e5%9c%a8%e7%9a%84path/"target="_blank" rel="external nofollow noopener noreferrer">同步子模块时出现gitmodules里不存在的path - 某人的小栈</a>得已解决</p>
+<p>是缓存的问题，原因：之前手动把.gitmodules的文件删了一部分，但是缓存没有更新。</p>
+<p>解决方法：清楚缓存，有几个删几个。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="c1"># 把缓存里的public目录清理掉</span>
+</span></span><span class="line"><span class="cl">git rm --cached public</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115855913.png" alt="image-20241204115855875" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115855913.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115855913.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115855913.png?size=large 2x" data-title="image-20241204115855875" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>即使如此，还是报错，这里怀疑是git的本地仓库一直有文件储藏了submodule的信息。尝试直接删除，强制推送。</p>
+<p>在执行 <code>git add.</code> 操作时，发现自己忽略的warning可能是报错的原因：Git 检测到你正在将项目内的 <code>themes/hugo-theme-reimu</code> 和 <code>themes/hugo-theme-stack</code> 这两个本身是 <code>git</code> 仓库（也就是嵌入式 <code>git</code> 仓库）的目录添加进来。这意味着它们可能不是以正确的子模块形式存在于当前仓库中，而只是单纯作为嵌套的 <code>git</code> 仓库被添加，这样会导致一些潜在问题，比如克隆外层仓库时不会包含这些嵌入式仓库的内容，并且也不知道如何获取它们。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Administrator@DESKTOP-CADL72R MINGW64 /g/code/github/hugo-FixIt/my-blog <span class="o">(</span>main<span class="o">)</span>
+</span></span><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">warning: adding embedded git repository: themes/hugo-theme-reimu
+</span></span><span class="line"><span class="cl">hint: You<span class="err">&#39;</span>ve added another git repository inside your current repository.
+</span></span><span class="line"><span class="cl">hint: Clones of the outer repository will not contain the contents of
+</span></span><span class="line"><span class="cl">hint: the embedded repository and will not know how to obtain it.
+</span></span><span class="line"><span class="cl">hint: If you meant to add a submodule, use:
+</span></span><span class="line"><span class="cl">hint:
+</span></span><span class="line"><span class="cl">hint:   git submodule add &lt;url&gt; themes/hugo-theme-reimu
+</span></span><span class="line"><span class="cl">hint:
+</span></span><span class="line"><span class="cl">hint: If you added this path by mistake, you can remove it from the
+</span></span><span class="line"><span class="cl">hint: index with:
+</span></span><span class="line"><span class="cl">hint:
+</span></span><span class="line"><span class="cl">hint:   git rm --cached themes/hugo-theme-reimu
+</span></span><span class="line"><span class="cl">hint:
+</span></span><span class="line"><span class="cl">hint: See <span class="s2">&#34;git help submodule&#34;</span> <span class="k">for</span> more information.
+</span></span><span class="line"><span class="cl">warning: adding embedded git repository: themes/hugo-theme-stack</span></span></code></pre></td></tr></table>
+</div>
+</div><p>而在github action的部署文件中也有一行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">submodules: recursive # Fetch Hugo themes (true OR recursive)</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>在这里<code>recursive</code>表示递归地获取子模块。如果项目使用了 Hugo 主题（Hugo themes）并且这些主题是以子模块的形式包含在项目中的，这个设置就会将主题相关的子模块以及这些子模块可能依赖的其他更深层次的子模块（如果有的话）全部获取下来。</li>
+</ul>
+<p>**错误的原因：**我git拉取了好几个hugo的theme，但是只使用了一个，在action配置文件中有一个参数<code>recursive</code>表示递归地获取子模块，所以导致每次都会有文件外的submodule找不到url和path。</p>
+<p>**解决方法：**删除这两个主题，并且清除子模块配置残留（本地）<strong>删除本地子模块目录（如果存在）</strong>：使用<code>rm -rf</code>命令删除本地仓库中对应的子模块目录。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">rm -rf public
+</span></span><span class="line"><span class="cl">rm -rf themes/hugo - theme - reimu
+</span></span><span class="line"><span class="cl">rm -rf themes/hugo - theme - stack</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>清除<code>Git</code>缓存中的子模块信息</strong>：执行以下命令来清除<code>Git</code>缓存中的子模块信息，这有助于确保<code>Git</code>不会再尝试使用已删除子模块的旧配置。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">git config - - remove - section submodule.public
+</span></span><span class="line"><span class="cl">git config - - remove - section submodule.themes/hugo - theme - reimu
+</span></span><span class="line"><span class="cl">git config - - remove - section submodule.themes/hugo - theme - stack</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用<code>git push - - force</code>将修改后的历史记录推送到远程仓库。</p>
+<p><strong>成功解决</strong></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-12-04 00:00:00">更新于 2024-12-04&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/github-page%E6%8A%A5%E9%94%99/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/" data-title="解决Error:fatal:No Url Found for Submodule Path &#39;Public&#39; in .Gitmodules.使用github Page部署失败。" data-hashtags="Github"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/" data-hashtag="Github"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/" data-title="解决Error:fatal:No Url Found for Submodule Path &#39;Public&#39; in .Gitmodules.使用github Page部署失败。" data-image="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102529533.jpg"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/github/" class="post-tag" title="标签 - Github">Github</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-nav-item" rel="prev" title="Hugo的使用"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Hugo的使用</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.135.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.13"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"version":"v0.3.13"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</html>

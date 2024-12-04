@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>解决GitHub访问时图裂、加载慢的问题 - Goran&#39;s Blog</title><meta name="author" content="Goran">
+<meta name="description" content="问题：GitHub，解决访问时图裂、加载慢的问题 在写markdown文档过程中遇到了github图床展示图片破损的问题。原因：dns污染，解决方法：修改host文件。网上找到两种方法，第一种手动改，这里推荐第二种自动更改。SwitchHosts是一个用于快速切换hosts文件的开源软件（https://github.com/oldj/SwitchHosts ）
+下载后直接正常安装，接着以管理员身份打开，点击左下角&#43;新建hosts，以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
+Hosts 类型: Remote Hosts 标题: 随意 URL: https://raw.hellogithub.com/hosts 自动刷新: 最好选 1 小时这样每隔一小时 SwitchHosts就会自动访问URL并更新hosts信息： 参考来源：521xueweihan/GitHub520: 😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装）
+"><meta name="keywords" content='Github'>
+  <meta itemprop="name" content="解决GitHub访问时图裂、加载慢的问题">
+  <meta itemprop="description" content="问题：GitHub，解决访问时图裂、加载慢的问题 在写markdown文档过程中遇到了github图床展示图片破损的问题。原因：dns污染，解决方法：修改host文件。网上找到两种方法，第一种手动改，这里推荐第二种自动更改。SwitchHosts是一个用于快速切换hosts文件的开源软件（https://github.com/oldj/SwitchHosts ）
+下载后直接正常安装，接着以管理员身份打开，点击左下角&#43;新建hosts，以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
+Hosts 类型: Remote Hosts 标题: 随意 URL: https://raw.hellogithub.com/hosts 自动刷新: 最好选 1 小时这样每隔一小时 SwitchHosts就会自动访问URL并更新hosts信息： 参考来源：521xueweihan/GitHub520: 😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装）">
+  <meta itemprop="datePublished" content="2024-11-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-11-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="23">
+  <meta itemprop="keywords" content="Github"><meta property="og:url" content="http://localhost:1313/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/">
+  <meta property="og:site_name" content="Goran&#39;s Blog">
+  <meta property="og:title" content="解决GitHub访问时图裂、加载慢的问题">
+  <meta property="og:description" content="问题：GitHub，解决访问时图裂、加载慢的问题 在写markdown文档过程中遇到了github图床展示图片破损的问题。原因：dns污染，解决方法：修改host文件。网上找到两种方法，第一种手动改，这里推荐第二种自动更改。SwitchHosts是一个用于快速切换hosts文件的开源软件（https://github.com/oldj/SwitchHosts ）
+下载后直接正常安装，接着以管理员身份打开，点击左下角&#43;新建hosts，以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
+Hosts 类型: Remote Hosts 标题: 随意 URL: https://raw.hellogithub.com/hosts 自动刷新: 最好选 1 小时这样每隔一小时 SwitchHosts就会自动访问URL并更新hosts信息： 参考来源：521xueweihan/GitHub520: 😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装）">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-29T00:00:00+00:00">
+    <meta property="article:tag" content="Github">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="解决GitHub访问时图裂、加载慢的问题">
+  <meta name="twitter:description" content="问题：GitHub，解决访问时图裂、加载慢的问题 在写markdown文档过程中遇到了github图床展示图片破损的问题。原因：dns污染，解决方法：修改host文件。网上找到两种方法，第一种手动改，这里推荐第二种自动更改。SwitchHosts是一个用于快速切换hosts文件的开源软件（https://github.com/oldj/SwitchHosts ）
+下载后直接正常安装，接着以管理员身份打开，点击左下角&#43;新建hosts，以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
+Hosts 类型: Remote Hosts 标题: 随意 URL: https://raw.hellogithub.com/hosts 自动刷新: 最好选 1 小时这样每隔一小时 SwitchHosts就会自动访问URL并更新hosts信息： 参考来源：521xueweihan/GitHub520: 😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装）">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" title="解决GitHub访问时图裂、加载慢的问题 - Goran&#39;s Blog" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD%E7%BD%91%E6%98%93%E4%BA%91%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90/" title="免费下载网易云版权音乐" /><link rel="next" type="text/html" href="http://localhost:1313/posts/%E8%A7%A3%E5%86%B3%E8%BF%87%E9%97%AE%E9%A2%98%E7%9A%84%E9%93%BE%E6%8E%A5/" title="能成功解决问题的方法" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/index.md" title="解决GitHub访问时图裂、加载慢的问题 - Goran's Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "解决GitHub访问时图裂、加载慢的问题",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98\/"
+    },"genre": "posts","keywords": "Github","wordcount":  23 ,
+    "url": "http:\/\/localhost:1313\/posts\/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98\/","datePublished": "2024-11-29T00:00:00+00:00","dateModified": "2024-11-29T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Goran"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>解决GitHub访问时图裂、加载慢的问题</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/GoranTan" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png" alt="Goran" data-title="Goran" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;Goran</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/code/" class="post-category" title="分类 - Code"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Code</a></span></div><div class="post-meta-line"><span title="发布于 2024-11-29 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-11-29">2024-11-29</time></span>&nbsp;<span title="23 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;</div>
+    </div><div class="featured-image"><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204101109387.jpg" alt="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204101109387.jpg" data-title="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204101109387.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></div><div class="content" id="content"><p>问题：<strong>GitHub，解决访问时图裂、加载慢的问题</strong>
+在写markdown文档过程中遇到了github图床展示图片破损的问题。原因：dns污染，解决方法：修改host文件。网上找到两种方法，第一种手动改，这里推荐第二种自动更改。<code>SwitchHosts</code>是一个用于快速切换<code>hosts</code>文件的开源软件（https://github.com/oldj/SwitchHosts ）</p>
+<p>下载后直接正常安装，接着以<strong>管理员身份</strong>打开，点击左下角<code>+</code>新建<code>hosts</code>，以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：</p>
+<ul>
+<li>Hosts 类型: <code>Remote</code></li>
+<li>Hosts 标题: 随意</li>
+<li>URL: <code>https://raw.hellogithub.com/hosts</code></li>
+<li>自动刷新: 最好选 <code>1 小时</code>这样每隔一小时</li>
+</ul>
+<p><code>SwitchHosts</code>就会自动访问URL并更新<code>hosts</code>信息：
+<img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174101330.png" alt="image-20241203174101278" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174101330.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174101330.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174101330.png?size=large 2x" data-title="image-20241203174101278" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>参考来源：<a href="https://github.com/521xueweihan/GitHub520"target="_blank" rel="external nofollow noopener noreferrer">521xueweihan/GitHub520: 😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装）</a></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-11-29 00:00:00">更新于 2024-11-29&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" data-title="解决GitHub访问时图裂、加载慢的问题" data-hashtags="Github"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" data-hashtag="Github"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/github%E8%A7%A3%E5%86%B3%E8%AE%BF%E9%97%AE%E6%97%B6%E5%9B%BE%E8%A3%82%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" data-title="解决GitHub访问时图裂、加载慢的问题" data-image="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204101109387.jpg"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/github/" class="post-tag" title="标签 - Github">Github</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD%E7%BD%91%E6%98%93%E4%BA%91%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90/" class="post-nav-item" rel="prev" title="免费下载网易云版权音乐"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>免费下载网易云版权音乐</a><a href="/posts/%E8%A7%A3%E5%86%B3%E8%BF%87%E9%97%AE%E9%A2%98%E7%9A%84%E9%93%BE%E6%8E%A5/" class="post-nav-item" rel="next" title="能成功解决问题的方法">能成功解决问题的方法<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.135.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.13"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"version":"v0.3.13"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</html>

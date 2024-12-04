@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 - 标签 - Goran&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Goran&#39;s Blog</description>
+    <generator>Hugo 0.135.0 &amp; FixIt v0.3.13</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>能成功解决问题的方法</title>
+      <link>http://localhost:1313/posts/%E8%A7%A3%E5%86%B3%E8%BF%87%E9%97%AE%E9%A2%98%E7%9A%84%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><author>2446040095@qq.com (Goran)</author>
+      <guid>http://localhost:1313/posts/%E8%A7%A3%E5%86%B3%E8%BF%87%E9%97%AE%E9%A2%98%E7%9A%84%E9%93%BE%E6%8E%A5/</guid>
+      <category domain="http://localhost:1313/categories/code/">Code</category>
+      <description>&lt;p&gt;1.&lt;a href=&#34;https://blog.csdn.net/muxuen/article/details/122441469&#34;target=&#34;_blank&#34; rel=&#34;external nofollow noopener noreferrer&#34;&gt;Typora+PicGo+阿里云OSS搭建博客图床（超详细）-CSDN博客&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;2.&lt;a href=&#34;https://blog.csdn.net/qq_61621323/article/details/141036982&#34;target=&#34;_blank&#34; rel=&#34;external nofollow noopener noreferrer&#34;&gt;Typora 免费安装教程（已支持最新版 1.9.5）_typora免费安装-CSDN博客&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;3.&lt;a href=&#34;https://www.fordece.cn/posts/%e5%90%8c%e6%ad%a5%e5%ad%90%e6%a8%a1%e5%9d%97%e6%97%b6%e5%87%ba%e7%8e%b0gitmodules%e9%87%8c%e4%b8%8d%e5%ad%98%e5%9c%a8%e7%9a%84path/&#34;target=&#34;_blank&#34; rel=&#34;external nofollow noopener noreferrer&#34;&gt;同步子模块时出现gitmodules里不存在的path - 某人的小栈&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

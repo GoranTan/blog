@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title> - Goran&#39;s Blog</title><meta name="author" content="">
+<meta name="description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 title: 解决hugo的一些小问题 date: 2024-12-03 # tags分为Github,前端，python，AI等 # categories分为code和life以及study tags: - 前端 categories: - code # 进入文章的第一张图 featuredImage: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093059688.jpg&#34; # 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/ featuredImagePreview: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093453089.png&#34; author: name: Goran link: https://github.com/GoranTan email: &#34;2446040095@qq.com&#34; avatar: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png&#34; page: - authorAvatar: true - wordCount : true - readingTime : true - endFlag: &#34;end&#34; - toc: true - 简介(Introduction)：布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。
+">
+  <meta itemprop="name" content="Goran&#39;s Blog">
+  <meta itemprop="description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 title: 解决hugo的一些小问题 date: 2024-12-03 # tags分为Github,前端，python，AI等 # categories分为code和life以及study tags: - 前端 categories: - code # 进入文章的第一张图 featuredImage: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093059688.jpg&#34; # 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/ featuredImagePreview: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093453089.png&#34; author: name: Goran link: https://github.com/GoranTan email: &#34;2446040095@qq.com&#34; avatar: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png&#34; page: - authorAvatar: true - wordCount : true - readingTime : true - endFlag: &#34;end&#34; - toc: true - 简介(Introduction)：布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。">
+  <meta itemprop="wordCount" content="185"><meta property="og:url" content="http://localhost:1313/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/">
+  <meta property="og:site_name" content="Goran&#39;s Blog">
+  <meta property="og:title" content="Goran&#39;s Blog">
+  <meta property="og:description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 title: 解决hugo的一些小问题 date: 2024-12-03 # tags分为Github,前端，python，AI等 # categories分为code和life以及study tags: - 前端 categories: - code # 进入文章的第一张图 featuredImage: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093059688.jpg&#34; # 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/ featuredImagePreview: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093453089.png&#34; author: name: Goran link: https://github.com/GoranTan email: &#34;2446040095@qq.com&#34; avatar: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png&#34; page: - authorAvatar: true - wordCount : true - readingTime : true - endFlag: &#34;end&#34; - toc: true - 简介(Introduction)：布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="不作为blog的md">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Goran&#39;s Blog">
+  <meta name="twitter:description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 title: 解决hugo的一些小问题 date: 2024-12-03 # tags分为Github,前端，python，AI等 # categories分为code和life以及study tags: - 前端 categories: - code # 进入文章的第一张图 featuredImage: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093059688.jpg&#34; # 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/ featuredImagePreview: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093453089.png&#34; author: name: Goran link: https://github.com/GoranTan email: &#34;2446040095@qq.com&#34; avatar: &#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png&#34; page: - authorAvatar: true - wordCount : true - readingTime : true - endFlag: &#34;end&#34; - toc: true - 简介(Introduction)：布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" title=" - Goran&#39;s Blog" /><link rel="prev" type="text/html" href="http://localhost:1313/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2/%E8%A7%A3%E5%86%B3%E8%BF%87%E9%97%AE%E9%A2%98%E7%9A%84%E9%93%BE%E6%8E%A5/" title="" /><link rel="next" type="text/html" href="http://localhost:1313/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2/%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3git-failed-to-connect-to-127.0.0.1-port-1080-connection-refused%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/" title="" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/index.md" title=" - Goran's Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md\/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2\/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98\/"
+    },"genre": "不作为blog的md","wordcount":  185 ,
+    "url": "http:\/\/localhost:1313\/%E4%B8%8D%E4%BD%9C%E4%B8%BAblog%E7%9A%84md\/%E7%A8%8B%E5%BA%8F%E5%8D%9A%E5%AE%A2\/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98\/","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "作者"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><article class="page single special">
+    <div class="header"><h1 class="single-title animate__animated animate__pulse animate__faster"></h1></div><div class="content" id="content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">title</span><span class="err">:</span> <span class="err">解决</span><span class="nx">hugo</span><span class="err">的一些小问题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">date</span><span class="err">:</span> <span class="mi">2024-12-03</span>
+</span></span><span class="line"><span class="cl"><span class="c"># tags分为Github,前端，python，AI等</span>
+</span></span><span class="line"><span class="cl"><span class="c"># categories分为code和life以及study</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tags</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="err">前端</span>
+</span></span><span class="line"><span class="cl"><span class="nx">categories</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="nx">code</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 进入文章的第一张图</span>
+</span></span><span class="line"><span class="cl"><span class="nx">featuredImage</span><span class="err">:</span> <span class="s2">&#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093059688.jpg&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/</span>
+</span></span><span class="line"><span class="cl"><span class="nx">featuredImagePreview</span><span class="err">:</span> <span class="s2">&#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093453089.png&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">author</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="err">:</span> <span class="nx">Goran</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">link</span><span class="err">:</span> <span class="nx">https</span><span class="err">://</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="err">/</span><span class="nx">GoranTan</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">email</span><span class="err">:</span> <span class="s2">&#34;2446040095@qq.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">avatar</span><span class="err">:</span> <span class="s2">&#34;https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">page</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="nx">authorAvatar</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="nx">wordCount</span> <span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="nx">readingTime</span> <span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="nx">endFlag</span><span class="err">:</span> <span class="s2">&#34;end&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">-</span> <span class="nx">toc</span><span class="err">:</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="--简介introduction" class="heading-element"><span>- 简介(Introduction)：</span>
+  <a href="#--%e7%ae%80%e4%bb%8bintroduction" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。</p>
+<h2 id="问题1配置文件的处理" class="heading-element"><span>问题1：配置文件的处理</span>
+  <a href="#%e9%97%ae%e9%a2%981%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e7%9a%84%e5%a4%84%e7%90%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>1.使用主题，不同的主题配置文件不同，需要做的就是不要找这么多教学，把官方文档看懂，跟着一个走就行。了解基础知识，比如说public文件夹是静态资源文件，原本里面是没有东西的，跑起来之后就有了，比如配置文件可以放在单独的文件夹也可以方法根目录下，但只能有一个，名字还可以不一样。
+2.下载有很多方式，推荐直接github下载，然后主题里面的内容是可以不用去管的，文档让你下载哪些资源，创建哪些文件夹是在自己新建的空项目里面做。
+3.不建议直接搬过来，但是可以试试，我没试过。</p>
+<h2 id="问题2更改网站宽度" class="heading-element"><span>问题2：更改网站宽度</span>
+  <a href="#%e9%97%ae%e9%a2%982%e6%9b%b4%e6%94%b9%e7%bd%91%e7%ab%99%e5%ae%bd%e5%ba%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>很多主题的宽度是按照hugo默认的，在读起来一句话很长看起来很难受。不知道大家选的主题是哪一个，这个设置一般是在assets的scss文件里面设置，我用的fixit主题可以支持自己在自己的assets文件夹下建立_override.scss文件，里面可以覆盖主题的样式，还有_custom.scss，fixit支持按照以下格式定义页面宽度。</p>
+<p>// 自定义页面宽度
+[data-page-style=&lsquo;custom&rsquo;] {
+@media only screen and (min-width: 1441px) {
+%page-style {
+width: 720px; // 设置宽度为800像素
+}
+}</p>
+<pre><code>@media only screen and (min-width: 1200px) {
+  %page-style {
+    width: 720px; // 设置宽度为800像素
+  }
+}
+  
+@media only screen and (max-width: 1200px) {
+  %page-style {
+    width: 100%; // 小屏幕时宽度100%
+  }
+}
+</code></pre>
+<p>}</p>
+<h2 id="问题3更改网站字体" class="heading-element"><span>问题3：更改网站字体</span>
+  <a href="#%e9%97%ae%e9%a2%983%e6%9b%b4%e6%94%b9%e7%bd%91%e7%ab%99%e5%ad%97%e4%bd%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这里原本是按照主题的文档来写的，下载好了字体ttf文件，但是没有成功，遇到报错。</p>
+<p>在_override.scss文件中自定义字体，然后将全局变量global-font-family修改，但是系统识别不了字体，读取不到，反复尝试多次不同的相对路径，确定不是路径问题。
+//以My-Blog为根目录
+@font-face {
+font-family: xgw-wenkai;
+src: url(&rsquo;../font/LXGWWenKaiGBScreen.ttf&rsquo;) format(&ldquo;ttf&rdquo;);
+font-display: swap;
+}
+//以assets为根目录
+@font-face {
+font-family: yinbi2;
+src: url(&rsquo;../font/正心格硬笔楷书简.ttf&rsquo;)format(&ldquo;ttf&rdquo;);
+font-display: swap;
+}
+//以myblog（cmd下的目录）为根目录
+@font-face {
+font-family: yinbi1;
+src: url(&rsquo;../font/瑞美加张清平硬笔楷书.ttf&rsquo;)format(&ldquo;ttf&rdquo;);
+font-display: swap;
+}
+$global-font-family: &lsquo;LXGW WenKai&rsquo;, yinbi1, yinbi2, sans-serif!important;</p>
+<p>后面也没找到原因，不过有另外一个方法，通过字体cdn网站成功解决，这个网站是线上配置字体资源，不需要本地下载，只需要引用就可以实现，非常方便。
+@import url(&lsquo;<a href="https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css%27%29;"target="_blank" rel="external nofollow noopener noreferrer">https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');</a>
+$global-font-family: &lsquo;LXGW WenKai&rsquo;, yinbi1, yinbi2, sans-serif!important;
+检查方式：可以打开网站，使用F12检查网络，网络刷新一下看是否有自己设定的字体刷出来。</p>
+</div></article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.135.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.13"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"version":"v0.3.13"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</html>

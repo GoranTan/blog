@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 - 标签 - Goran&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</link>
+    <description>Goran&#39;s Blog</description>
+    <generator>Hugo 0.135.0 &amp; FixIt v0.3.13</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo的使用</title>
+      <link>http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate><author>2446040095@qq.com (Goran)</author>
+      <guid>http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <category domain="http://localhost:1313/categories/code/">Code</category>
+      <description>&lt;h2 id=&#34;1配置自己的初始网站上传第一个博客&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;1.配置自己的初始网站，上传第一个博客。&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#1%e9%85%8d%e7%bd%ae%e8%87%aa%e5%b7%b1%e7%9a%84%e5%88%9d%e5%a7%8b%e7%bd%91%e7%ab%99%e4%b8%8a%e4%bc%a0%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8d%9a%e5%ae%a2&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;h2 id=&#34;11先决条件&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;1.1先决条件&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#11%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;在开始本教程之前，你必须：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>解决hugo的一些小问题</title>
+      <link>http://localhost:1313/posts/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate><author>2446040095@qq.com (Goran)</author>
+      <guid>http://localhost:1313/posts/%E8%A7%A3%E5%86%B3hugo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/</guid>
+      <category domain="http://localhost:1313/categories/code/">Code</category>
+      <description>&lt;h2 id=&#34;--简介introduction&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;- 简介(Introduction)：&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#--%e7%ae%80%e4%bb%8bintroduction&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

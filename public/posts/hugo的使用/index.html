@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Hugo的使用 - Goran&#39;s Blog</title><meta name="author" content="Goran">
+<meta name="description" content="1.配置自己的初始网站，上传第一个博客。1.1先决条件在开始本教程之前，你必须：
+"><meta name="keywords" content='前端'>
+  <meta itemprop="name" content="hugo的使用">
+  <meta itemprop="description" content="1.配置自己的初始网站，上传第一个博客。1.1先决条件在开始本教程之前，你必须：">
+  <meta itemprop="datePublished" content="2024-12-03T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-03T00:00:00+00:00">
+  <meta itemprop="wordCount" content="862">
+  <meta itemprop="keywords" content="前端"><meta property="og:url" content="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/">
+  <meta property="og:site_name" content="Goran&#39;s Blog">
+  <meta property="og:title" content="hugo的使用">
+  <meta property="og:description" content="1.配置自己的初始网站，上传第一个博客。1.1先决条件在开始本教程之前，你必须：">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-03T00:00:00+00:00">
+    <meta property="article:tag" content="前端">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="hugo的使用">
+  <meta name="twitter:description" content="1.配置自己的初始网站，上传第一个博客。1.1先决条件在开始本教程之前，你必须：">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" title="hugo的使用 - Goran&#39;s Blog" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/paddleocr/" title="paddleOCR——一个AI图片识别项目" /><link rel="next" type="text/html" href="http://localhost:1313/posts/github-page%E6%8A%A5%E9%94%99/" title="解决Error:fatal:No url found for submodule path &#39;public&#39; in .gitmodules.使用github page部署失败。" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/index.md" title="hugo的使用 - Goran's Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "hugo的使用",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/hugo%E7%9A%84%E4%BD%BF%E7%94%A8\/"
+    },"genre": "posts","keywords": "前端","wordcount":  862 ,
+    "url": "http:\/\/localhost:1313\/posts\/hugo%E7%9A%84%E4%BD%BF%E7%94%A8\/","datePublished": "2024-12-03T00:00:00+00:00","dateModified": "2024-12-03T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Goran"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Goran&#39;s Blog"><span class="header-title-text">Goran&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Hugo的使用</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/GoranTan" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png" alt="Goran" data-title="Goran" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;Goran</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/code/" class="post-category" title="分类 - Code"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Code</a></span></div><div class="post-meta-line"><span title="发布于 2024-12-03 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-12-03">2024-12-03</time></span>&nbsp;<span title="862 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 900 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
+    </div><div class="featured-image"><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102537502.jpg" alt="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102537502.jpg" data-title="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102537502.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#121-命令">1.2.1 命令</a></li>
+        <li><a href="#122-命令解释">1.2.2 命令解释</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-必要配置">1.3 必要配置</a></li>
+    <li><a href="#14-添加内容">1.4 添加内容</a></li>
+    <li><a href="#15-发布网站">1.5 发布网站</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-概念搭建思路和运行环境">2.1 概念，搭建思路和运行环境</a>
+      <ul>
+        <li><a href="#211-什么是-github-pages">2.1.1 什么是 GitHub Pages？</a></li>
+        <li><a href="#212-什么是-hugo">2.1.2 什么是 Hugo？</a></li>
+        <li><a href="#213-网站搭建思路">2.1.3 网站搭建思路</a></li>
+      </ul>
+    </li>
+    <li><a href="#22-创建-github-仓库">2.2 创建 GitHub 仓库</a>
+      <ul>
+        <li><a href="#221-创建博客源仓库">2.2.1 创建博客源仓库</a></li>
+        <li><a href="#222-创建-github-page-仓库">2.2.2 创建 GitHub Page 仓库</a></li>
+        <li><a href="#223-生成actions-secrets">2.2.3 生成Actions secrets</a></li>
+        <li><a href="#224-配置actions文件">2.2.4 配置actions文件</a></li>
+        <li><a href="#225推送代码到源码仓库">2.2.5推送代码到源码仓库</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#31配置文件的处理">3.1：配置文件的处理</a></li>
+    <li><a href="#32更改网站宽度">3.2：更改网站宽度</a></li>
+    <li><a href="#33更改网站字体">3.3：更改网站字体</a></li>
+    <li><a href="#34插入图片">3.4：插入图片</a></li>
+    <li><a href="#35一个好用的md编写文件图床">3.5：一个好用的md编写文件+图床</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="1配置自己的初始网站上传第一个博客" class="heading-element"><span>1.配置自己的初始网站，上传第一个博客。</span>
+  <a href="#1%e9%85%8d%e7%bd%ae%e8%87%aa%e5%b7%b1%e7%9a%84%e5%88%9d%e5%a7%8b%e7%bd%91%e7%ab%99%e4%b8%8a%e4%bc%a0%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8d%9a%e5%ae%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="11先决条件" class="heading-element"><span>1.1先决条件</span>
+  <a href="#11%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>在开始本教程之前，你必须：</p>
+<ol>
+<li><a href="https://gohugo.io/getting-started/installing/"target="_blank" rel="external nofollow noopener noreferrer">安装 Hugo</a>（扩展版，v0.134.1 或更高版本）</li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"target="_blank" rel="external nofollow noopener noreferrer">安装 Git</a></li>
+</ol>
+<h2 id="12创建网站" class="heading-element"><span>1.2创建网站</span>
+  <a href="#12%e5%88%9b%e5%bb%ba%e7%bd%91%e7%ab%99" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="121-命令" class="heading-element"><span>1.2.1 命令</span>
+  <a href="#121-%e5%91%bd%e4%bb%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>验证你是否安装了 Hugo v0.134.1 或更高版本。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行以下命令来创建一个带有 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt</a> 主题的 Hugo 网站。下一节将对每个命令进行解释。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site my-blog
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> my-blog
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;FixIt&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;defaultContentLanguage = &#39;zh-cn&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span><span class="line"><span class="cl">hugo server</span></span></code></pre></td></tr></table>
+</div>
+</div><p>windows系统下的可以在主目录或者配置目录中的toml手动将theme = ‘FixIt’，&ldquo;defaultContentLanguage = ‘zh-cn’&ldquo;添加进去。</p>
+<p>通过终端中显示的 URL 查看你的站点。按 <code>Ctrl + C</code> 停止 Hugo 的开发服务器。</p>
+<h3 id="122-命令解释" class="heading-element"><span>1.2.2 命令解释</span>
+  <a href="#122-%e5%91%bd%e4%bb%a4%e8%a7%a3%e9%87%8a" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>在 <code>my-blog</code> 目录中为你的项目创建 <a href="https://gohugo.io/getting-started/directory-structure/"target="_blank" rel="external nofollow noopener noreferrer">目录结构骨架</a>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site my-blog</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将当前目录更改为项目的根目录。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> my-blog</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在当前目录中初始化一个空的 Git 存储库。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt</a> 主题作为 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules"target="_blank" rel="external nofollow noopener noreferrer">Git 子模块</a> 添加到你的项目中的 <code>themes</code> 目录。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在站点配置文件中添加一行，指定当前主题。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;FixIt&#39;&#34;</span> &gt;&gt; hugo.toml</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在站点配置文件中添加一行，指定默认的内容语言。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;defaultContentLanguage = &#39;zh-cn&#39;&#34;</span> &gt;&gt; hugo.toml</span></span></code></pre></td></tr></table>
+</div>
+</div><p>启动 Hugo 的开发服务器以查看站点。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server</span></span></code></pre></td></tr></table>
+</div>
+</div><p>按 <code>Ctrl + C</code> 停止 Hugo 的开发服务器。</p>
+<h2 id="13-必要配置" class="heading-element"><span>1.3 必要配置</span>
+  <a href="#13-%e5%bf%85%e8%a6%81%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>为了能完整地使用 FixIt 主题的所有功能，务必在站点配置文件中添加以下内容。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s2">&#34;shallow&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s2">&#34;shallow&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s2">&#34;shallow&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>以上配置表示继承 FixIt 主题的 <code>markup</code>，<code>outputs</code> 和 <code>taxonomies</code> 配置。</p>
+<h2 id="14-添加内容" class="heading-element"><span>1.4 添加内容</span>
+  <a href="#14-%e6%b7%bb%e5%8a%a0%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>给你的网站添加新页面。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new content posts/my-first-post.md</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Hugo 在 <code>content/posts</code> 目录中创建了该文件，使用编辑器打开文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: 我的第一篇文章
+</span></span><span class="line"><span class="cl">date: 2024-03-01T17:10:04+08:00
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl"><span class="gh"># ...
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>---</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：新建的md文件前面会有一段注释，用于hugo识别文档的一些配置信息，比如标题，所属类别，作者头像，是否在文章末尾显示集合导航等等。</p>
+<p>请注意，<a href="https://gohugo.io/content-management/front-matter/"target="_blank" rel="external nofollow noopener noreferrer">front matter</a> 中的 <code>draft</code> 值为 <code>true</code>。默认情况下，Hugo 在你构建网站时不会发布草稿内容。详细了解 <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content"target="_blank" rel="external nofollow noopener noreferrer">草稿、未来和过期内容</a>。</p>
+<p>在帖子正文中添加一些 <a href="https://commonmark.org/help/"target="_blank" rel="external nofollow noopener noreferrer">Markdown</a>，但不要更改 <code>draft</code> 值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: 我的第一篇文章
+</span></span><span class="line"><span class="cl">date: 2024-03-01T17:10:04+08:00
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl"><span class="gh"># ...
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">博客（英语：Blog）是一种在线日记型式的个人网站，借由张帖子章、图片或视频来记录生活、抒发情感或分享信息。博客上的文章通常根据张贴时间，以倒序方式由新到旧排列。</span></span></code></pre></td></tr></table>
+</div>
+</div><p>保存文件，然后启动 Hugo 的开发服务器来查看站点。你可以运行以下任一命令来包含草稿内容。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server --buildDrafts
+</span></span><span class="line"><span class="cl">hugo server -D
+</span></span><span class="line"><span class="cl">hugo server -D --disableFastRender</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于本主题使用了 Hugo 中的 <code>.Scratch</code> 和 <code>.Store</code> 来实现一些特性， 非常建议你为 <code>hugo server</code> 命令添加 <code>--disableFastRender</code> 参数来实时预览你正在编辑的文章页面。
+<a href="https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/simple-preview.webp?size=large"target="_blank" rel="external nofollow noopener noreferrer"><img loading="lazy" src="https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/simple-preview.webp" alt="基本配置下的预览" srcset="https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/simple-preview.webp?size=small, https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/simple-preview.webp?size=medium 1.5x, https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/simple-preview.webp?size=large 2x" data-title="基本配置下的预览" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></p>
+<p>基本配置下的预览</p>
+<p>当对新内容感到满意时，将 front matter 中的 <code>draft</code> 值更改为 <code>false</code>，然后保存文件。</p>
+<h2 id="15-发布网站" class="heading-element"><span>1.5 发布网站</span>
+  <a href="#15-%e5%8f%91%e5%b8%83%e7%bd%91%e7%ab%99" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>在此步骤中，你将发布你的网站，但不会 <em>部署</em> 它。</p>
+<p>当你发布站点时，Hugo 在项目根目录的 <code>public</code> 目录中创建整个静态站点。这包括 HTML 文件以及图像、CSS 文件和 JavaScript 文件等资源。</p>
+<p>当你发布网站时，你通常不希望包含 <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content"target="_blank" rel="external nofollow noopener noreferrer">草稿、未来或过期的内容</a>，命令很简单。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们的大多数用户使用 CI/CD 工作流程部署他们的网站，通过推送 <a href="https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/#fn:1"target="_blank" rel="external nofollow noopener noreferrer">1</a>到他们的 GitHub 或 GitLab 存储库会触发构建和部署。流行的提供商包括 <a href="https://vercel.com/"target="_blank" rel="external nofollow noopener noreferrer">Vercel</a><a href="https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/#fn:2"target="_blank" rel="external nofollow noopener noreferrer">2</a>、<a href="https://www.netlify.com/"target="_blank" rel="external nofollow noopener noreferrer">Netlify</a><a href="https://fixit.lruihao.cn/zh-cn/documentation/getting-started/quick-start/#fn:3"target="_blank" rel="external nofollow noopener noreferrer">3</a>、<a href="https://aws.amazon.com/amplify/"target="_blank" rel="external nofollow noopener noreferrer">AWS Amplify</a>、<a href="https://cloudcannon.com/"target="_blank" rel="external nofollow noopener noreferrer">CloudCannon</a>、<a href="https://pages.cloudflare.com/"target="_blank" rel="external nofollow noopener noreferrer">Cloudflare Pages</a>、 <a href="https://pages.github.com/"target="_blank" rel="external nofollow noopener noreferrer">GitHub pages</a> 和 <a href="https://docs.gitlab.com/ee/user/project/pages/"target="_blank" rel="external nofollow noopener noreferrer">GitLab pages</a>。</p>
+<h2 id="2通过github-pages-将自己的个人博客部署到云端再通过github-action实现本地自动上传更新" class="heading-element"><span>2.通过GitHub Pages 将自己的个人博客部署到云端，再通过github action实现本地自动上传更新。</span>
+  <a href="#2%e9%80%9a%e8%bf%87github-pages-%e5%b0%86%e8%87%aa%e5%b7%b1%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e9%83%a8%e7%bd%b2%e5%88%b0%e4%ba%91%e7%ab%af%e5%86%8d%e9%80%9a%e8%bf%87github-action%e5%ae%9e%e7%8e%b0%e6%9c%ac%e5%9c%b0%e8%87%aa%e5%8a%a8%e4%b8%8a%e4%bc%a0%e6%9b%b4%e6%96%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="21-概念搭建思路和运行环境" class="heading-element"><span>2.1 概念，搭建思路和运行环境</span>
+  <a href="#21-%e6%a6%82%e5%bf%b5%e6%90%ad%e5%bb%ba%e6%80%9d%e8%b7%af%e5%92%8c%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="211-什么是-github-pages" class="heading-element"><span>2.1.1 什么是 GitHub Pages？</span>
+  <a href="#211-%e4%bb%80%e4%b9%88%e6%98%af-github-pages" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Github Pages 是一个可以从你的 Github 源码仓库中直接生成个人、组织或者项目页面的静态站点托管服务。</p>
+<p>Github Pages 只能托管静态站点，不能运行服务器端源码，比如 PHP、Java、Python 或者 Ruby。</p>
+<h3 id="212-什么是-hugo" class="heading-element"><span>2.1.2 什么是 Hugo？</span>
+  <a href="#212-%e4%bb%80%e4%b9%88%e6%98%af-hugo" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><a href="https://gohugo.io/"target="_blank" rel="external nofollow noopener noreferrer">Hugo</a> 是用 Go 语言写的静态网站生成器（Static Site Generator）。可以把 Markdown 文件转化成 HTML 文件。</p>
+<h3 id="213-网站搭建思路" class="heading-element"><span>2.1.3 网站搭建思路</span>
+  <a href="#213-%e7%bd%91%e7%ab%99%e6%90%ad%e5%bb%ba%e6%80%9d%e8%b7%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>创建 2 个 GitHub 仓库
+<ul>
+<li><strong>博客源仓库</strong>：储存所有 Markdown 源文件（博客内容），和博客中用到的图片等。</li>
+<li><strong>GitHub Pages 仓库</strong>：储存由 Hugo 从Markdown 文件生成的 HTML 文件。</li>
+</ul>
+</li>
+<li>将在<strong>博客源仓库</strong>中 Hugo 生成的静态 HTML 文件部署到远端 <strong>GitHub Pages 仓库</strong>中。</li>
+</ol>
+<h2 id="22-创建-github-仓库" class="heading-element"><span>2.2 创建 GitHub 仓库</span>
+  <a href="#22-%e5%88%9b%e5%bb%ba-github-%e4%bb%93%e5%ba%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="221-创建博客源仓库" class="heading-element"><span>2.2.1 创建博客源仓库</span>
+  <a href="#221-%e5%88%9b%e5%bb%ba%e5%8d%9a%e5%ae%a2%e6%ba%90%e4%bb%93%e5%ba%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>命名<strong>博客源仓库</strong>（whatever you want）</li>
+<li>勾选 <strong>Pricate</strong>，设置为公开仓库。</li>
+<li>勾选添加 <strong>README</strong> 文件。</li>
+</ol>
+<p>我将博客源码分开存放到一个private repo里，也可以将源码放到github pages repo中，但这样其他人能获取文章的源文件。</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-47-09.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-47-09.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-47-09.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-47-09.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="222-创建-github-page-仓库" class="heading-element"><span>2.2.2 创建 GitHub Page 仓库</span>
+  <a href="#222-%e5%88%9b%e5%bb%ba-github-page-%e4%bb%93%e5%ba%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>命名 <strong>GitHub Pages</strong> 仓库，这个仓库必须使用特殊的命名格式 <code>&lt;username.github.io&gt;</code>， <code>&lt;username&gt;</code> 是自己的 GitHub 的用户名。</li>
+<li>勾选 <strong>Public</strong>，设置为公开仓库。</li>
+<li>勾选添加 <strong>README</strong> 文件，这会设置 <code>main</code> 分支为仓库的默认主分支，这在后面提交推送博客内容时很重要。</li>
+</ol>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-51-25.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-51-25.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-51-25.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/Snipaste_2024-01-03_20-51-25.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174347771.png" alt="image-20241203174347684" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174347771.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174347771.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174347771.png?size=large 2x" data-title="image-20241203174347684" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>使用Github Actions功能实现提交源码后自动发布。</p>
+<h3 id="223-生成actions-secrets" class="heading-element"><span>2.2.3 生成Actions secrets</span>
+  <a href="#223-%e7%94%9f%e6%88%90actions-secrets" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>
+<p>生成Personal access tokens 首先点击github头像在下拉栏里进入Setting-&gt;Developer Settings-&gt;Personal access tokens -&gt; tokens (classic)</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211119.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211119.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211119.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211119.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+</li>
+</ol>
+<p>选择Generate new token</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211322.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211322.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211322.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211322.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>点击Generate token生成token，并先复制保存该token。(这个token只有显示一次，所以一定要复制保存)</p>
+<ol>
+<li>生成Actions secrets 接下来在源码repo中添加上面的personal access token：</li>
+</ol>
+<p>进入repo的Settings-&gt;Secrets and variable一栏，选择New repository secret</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211622.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211622.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211622.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211622.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>名称自取，Secret复制上面生成的Personal access tokens</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211853.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211853.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211853.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103211853.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="224-配置actions文件" class="heading-element"><span>2.2.4 配置actions文件</span>
+  <a href="#224-%e9%85%8d%e7%bd%aeactions%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>在repo根目录新建嵌套的两个文件夹.github/workflows</p>
+<p>在workflows里新建一个后缀为.yml的配置文件，名字自取。</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103212223.png" alt="img" srcset="https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103212223.png?size=small, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103212223.png?size=medium 1.5x, https://cdn.jsdelivr.net/gh/krislinzhao/IMGcloud/img/20240103212223.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>写进去以下配置（从hugo官方文档修改而来）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github pages</span><span class="w"> </span><span class="c"># 名字自取</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main </span><span class="w"> </span><span class="c"># 这里的意思是当 main分支发生push的时候，运行下面的jobs，这里先改为github-actions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w"> </span><span class="c"># 任务名自取</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest	# 在什么环境运行任务</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2	# 引用actions/checkout这个action，与所在的github仓库同名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  </span><span class="c"># Fetch Hugo themes (true OR recursive) 获取submodule主题</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c"># Fetch all history for .GitInfo and .Lastmod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo	# 步骤名自取</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2	# hugo官方提供的action，用于在任务环境中获取hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;latest&#39;</span><span class="w">	</span><span class="c"># 获取最新版本的hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># extended: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo --minify	# 使用hugo构建静态网页</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3	# 一个自动发布github pages的action</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="c"># github_token: ${{ secrets.GITHUB_TOKEN }} 该项适用于发布到源码相同repo的情况，不能用于发布到其他repo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">external_repository</span><span class="p">:</span><span class="w"> </span><span class="l">krislinzhao/krislinzhao.github.io	# 发布到哪个repo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">personal_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.ACTION_ACCESS_TOKEN }}	# 发布到其他repo需要提供上面生成的personal access token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public	# 注意这里指的是要发布哪个文件夹的内容，而不是指发布到目的仓库的什么位置，因为hugo默认生成静态网页到public文件夹，所以这里发布public文件夹里的内容</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">main	# 发布到哪个branch</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>yml文件中只需要改external_repository为自己的github page仓库，personal_token: ${{ <a href="http://secrets.xxx/"target="_blank" rel="external nofollow noopener noreferrer">secrets.XXX</a> }} XXX改成上面生成Actions secrets步骤中取得名称。</p>
+<h3 id="225推送代码到源码仓库" class="heading-element"><span>2.2.5推送代码到源码仓库</span>
+  <a href="#225%e6%8e%a8%e9%80%81%e4%bb%a3%e7%a0%81%e5%88%b0%e6%ba%90%e7%a0%81%e4%bb%93%e5%ba%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>
+<p>将BlogSource文件夹初始化为 Git 仓库，并设置默认主分支名为 main。这么做的原因是：</p>
+<p>GitHub 创建仓库时生成的默认主分支名是 main 用 git init 初始化 Git 仓库时创建的默认主分支名是 master 将 git init 创建的 master 修改成 main ，再推送给远端仓库，这样才不会报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git init -b main</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>将 public 文件夹关联远程 GitHub Pages 仓库，使用 GitHub Pages 仓库的 SSH 链接。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git remote add origin ggit@github.com:krislinzhao/BlogSource.git</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>推送本地文件到远程仓库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"> git pull --rebase origin main
+</span></span><span class="line"><span class="cl"> git add .
+</span></span><span class="line"><span class="cl"> git commit -m <span class="s2">&#34;...(修改的信息)&#34;</span>
+</span></span><span class="line"><span class="cl"> git push origin main</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>推送完成之后到github仓库中的Actions中就可以看到runs运行成功，你的github pages仓库就会有hugo生成的html文件了，然后你就可以通过 <a href="https://krislinzhao.github.io/"target="_blank" rel="external nofollow noopener noreferrer">https://krislinzhao.github.io</a> 访问你的博客了。</p>
+<h2 id="3个性化设置试一下-hugo-theme-reimu主题和fixit主题" class="heading-element"><span>3.个性化设置试一下 hugo-theme-reimu主题和fixit主题</span>
+  <a href="#3%e4%b8%aa%e6%80%a7%e5%8c%96%e8%ae%be%e7%bd%ae%e8%af%95%e4%b8%80%e4%b8%8b-hugo-theme-reimu%e4%b8%bb%e9%a2%98%e5%92%8cfixit%e4%b8%bb%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>布置hugo遇到的bug和问题，目前已实现功能：本地部署网站发布第一篇帖子，更改网站字体，更改网站宽度，部署到github page，使用github action自动部署。</p>
+<h2 id="31配置文件的处理" class="heading-element"><span>3.1：配置文件的处理</span>
+  <a href="#31%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e7%9a%84%e5%a4%84%e7%90%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>1.使用主题，不同的主题配置文件不同，需要做的就是不要找这么多教学，把官方文档看懂，跟着一个走就行。了解基础知识，比如说public文件夹是静态资源文件，原本里面是没有东西的，跑起来之后就有了，比如配置文件可以放在单独的文件夹也可以方法根目录下，但只能有一个，名字还可以不一样。</p>
+<p>2.下载有很多方式，推荐直接github下载，然后主题里面的内容是可以不用去管的，文档让你下载哪些资源，创建哪些文件夹是在自己新建的空项目里面做。</p>
+<p>3.不建议直接搬过来，但是可以试试，我没试过。</p>
+<h2 id="32更改网站宽度" class="heading-element"><span>3.2：更改网站宽度</span>
+  <a href="#32%e6%9b%b4%e6%94%b9%e7%bd%91%e7%ab%99%e5%ae%bd%e5%ba%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>很多主题的宽度是按照hugo默认的，在读起来一句话很长看起来很难受。不知道大家选的主题是哪一个，这个设置一般是在assets的scss文件里面设置，我用的fixit主题可以支持自己在自己的assets文件夹下建立_override.scss文件，里面可以覆盖主题的样式，还有_custom.scss，fixit支持按照以下格式定义页面宽度。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 自定义页面宽度
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[data-page-style=&#39;custom&#39;] {
+</span></span><span class="line"><span class="cl">@media only screen and (min-width: 1441px) {
+</span></span><span class="line"><span class="cl">%page-style {
+</span></span><span class="line"><span class="cl">width: 720px; // 设置宽度为800像素
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@media only screen and (min-width: 1200px) {
+</span></span><span class="line"><span class="cl">	%page-style {
+</span></span><span class="line"><span class="cl">		width: 720px; // 设置宽度为800像素
+</span></span><span class="line"><span class="cl">}	}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@media only screen and (max-width: 1200px) {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">%page-style {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">width: 100%; // 小屏幕时宽度100%
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}	
+</span></span><span class="line"><span class="cl">	}	
+</span></span><span class="line"><span class="cl">		}</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="33更改网站字体" class="heading-element"><span>3.3：更改网站字体</span>
+  <a href="#33%e6%9b%b4%e6%94%b9%e7%bd%91%e7%ab%99%e5%ad%97%e4%bd%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这里原本是按照主题的文档来写的，下载好了字体ttf文件，但是没有成功，遇到报错。</p>
+<p>在_override.scss文件中自定义字体，然后将全局变量global-font-family修改，但是系统识别不了字体，读取不到，反复尝试多次不同的相对路径，确定不是路径问题。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//以My-Blog为根目录
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@font-face {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">font-family: xgw-wenkai;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">src: url(&#39;../font/LXGWWenKaiGBScreen.ttf&#39;) format(&#34;ttf&#34;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">font-display: swap;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//以assets为根目录
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@font-face {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">font-family: yinbi2;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">src: url(&#39;../font/正心格硬笔楷书简.ttf&#39;)format(&#34;ttf&#34;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">font-display: swap;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//以myblog（cmd下的目录）为根目录
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@font-face {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">font-family: yinbi1;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">src: url(&#39;../font/瑞美加张清平硬笔楷书.ttf&#39;)format(&#34;ttf&#34;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">font-display: swap;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$global-font-family: &#39;LXGW WenKai&#39;, yinbi1, yinbi2, sans-serif!important;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>后面也没找到原因，不过有另外一个方法，通过字体cdn网站成功解决，这个网站是线上配置字体资源，不需要本地下载，只需要引用就可以实现，非常方便。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@import url(&#39;https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css&#39;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$global-font-family: &#39;LXGW WenKai&#39;, yinbi1, yinbi2, sans-serif!important;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>检查方式：可以打开网站，使用F12检查网络，网络刷新一下看是否有自己设定的字体刷出来。</p>
+<h2 id="34插入图片" class="heading-element"><span>3.4：插入图片</span>
+  <a href="#34%e6%8f%92%e5%85%a5%e5%9b%be%e7%89%87" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Hugo 官方提供了一些 shortcodes 短代码，其中就包含插入图片的短代码 figure</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;center&gt;<figure><img src="../assets/content.png" width="100%"><figcaption>
+      <h4>原文截图</h4>
+    </figcaption>
+</figure>
+&lt;/center&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;center&gt;<figure><img src="../assets/OIP-C.jfif" width="100%"><figcaption>
+      <h4>测试</h4>
+    </figcaption>
+</figure>
+&lt;/center&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="35一个好用的md编写文件图床" class="heading-element"><span>3.5：一个好用的md编写文件+图床</span>
+  <a href="#35%e4%b8%80%e4%b8%aa%e5%a5%bd%e7%94%a8%e7%9a%84md%e7%bc%96%e5%86%99%e6%96%87%e4%bb%b6%e5%9b%be%e5%ba%8a" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><strong>为什么要搭建博客图床?</strong>
+在本地的markdown文件.md中，图片是以“外链”这一形式存在的</p>
+<p>Office word中，图片是直接插入docx文件里面
+Markdown中，图片只是一个本地/联网的地址
+也就是说，如果我们使用本地markdown编译器（如typora）来编辑MD文件的时候，如果MD里面插入的图片的源文件被移动或者删除了，我们的MD文档里面对应的图片也无法显示出来。</p>
+<p>同时，如果我们用本地编辑器写好了一篇博客，想把它上传到CSDN上。CSDN是无法自动转存文件里面的图片的（因为这个图片只是一个你硬盘里面的文件路径）</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-0gNYdqHb-1647670910810)(photo/image-20220318140612548.png)]</p>
+<p>这时候我们就需要用图床来解决这个问题</p>
+<p><strong>什么是图床？</strong></p>
+<p>在我们往typora里插入图片的时候，PicGO会自动上传图片到图床，并返回一个图片的链接</p>
+<p>这时候你的图片就是一个网络的链接(网址)，不再是本地路径。</p>
+<p>你也可以在任何有网络的地方、用任何设备访问这张图片了</p>
+<p>即便是本地的那张图片移动or删除，也不会影响图床里的这张图片</p>
+<p>markdown本地文件里面的图片也就不会失效了！</p>
+<p><a href="https://blog.csdn.net/muxuen/article/details/122441469"target="_blank" rel="external nofollow noopener noreferrer">Typora+PicGo+阿里云OSS搭建博客图床（超详细）-CSDN博客</a></p>
+<p><strong>其它主题展示：</strong></p>
+<p>reimu主题：</p>
+<p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174536948.png" alt="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174536948.png" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174536948.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174536948.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174536948.png?size=large 2x" data-title="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174536948.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>blowfish主题：</p>
+<p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174506842.png" alt="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174506842.png" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174506842.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174506842.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174506842.png?size=large 2x" data-title="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174506842.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>stack主题：</p>
+<p><img loading="lazy" src="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174434031.png" alt="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174434031.png" srcset="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174434031.png?size=small, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174434031.png?size=medium 1.5x, https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174434031.png?size=large 2x" data-title="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174434031.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-12-03 00:00:00">更新于 2024-12-03&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" data-title="Hugo的使用" data-hashtags="前端"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" data-hashtag="前端"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" data-title="Hugo的使用" data-image="https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102537502.jpg"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E5%89%8D%E7%AB%AF/" class="post-tag" title="标签 - 前端">前端</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/paddleocr/" class="post-nav-item" rel="prev" title="PaddleOCR——一个AI图片识别项目"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>PaddleOCR——一个AI图片识别项目</a><a href="/posts/github-page%E6%8A%A5%E9%94%99/" class="post-nav-item" rel="next" title="解决Error:fatal:No Url Found for Submodule Path &#39;Public&#39; in .Gitmodules.使用github Page部署失败。">解决Error:fatal:No Url Found for Submodule Path &#39;Public&#39; in .Gitmodules.使用github Page部署失败。<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.135.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.13"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"version":"v0.3.13"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</html>
