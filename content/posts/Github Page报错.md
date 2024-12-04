@@ -66,3 +66,27 @@ git rm --cached public
 ```
 
 ![image-20241204115855875](https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204115855913.png)
+
+
+
+即使如此，还是报错，这里怀疑是git的本地仓库一直有文件储藏了submodule的信息。尝试直接删除，强制推送
+
+1. - 清除子模块配置残留（本地）
+     - **检查`.gitmodules`文件**：再次确认`.gitmodules`文件，确保其中已经没有关于`public`、`themes/hugo - theme - reimu`和`themes/hugo - theme - stack`的配置信息。如果还有残留，手动删除这些子模块相关的部分。
+     - **删除本地子模块目录（如果存在）**：使用`rm -rf`命令删除本地仓库中对应的子模块目录。例如：
+
+```plaintext
+rm -rf public
+rm -rf themes/hugo - theme - reimu
+rm -rf themes/hugo - theme - stack
+```
+
+- **清除`Git`缓存中的子模块信息**：执行以下命令来清除`Git`缓存中的子模块信息，这有助于确保`Git`不会再尝试使用已删除子模块的旧配置。
+
+```plaintext
+git config - - remove - section submodule.public
+git config - - remove - section submodule.themes/hugo - theme - reimu
+git config - - remove - section submodule.themes/hugo - theme - stack
+```
+
+使用`git push - - force`将修改后的历史记录推送到远程仓库。这会覆盖远程仓库的现有历史记录。
