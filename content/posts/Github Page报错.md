@@ -1,5 +1,5 @@
 ---
-title:  解决Error: fatal: No url found for submodule path 'public' in .gitmodules，使用github page部署失败。
+title: 解决Error:fatal:No url found for submodule path 'public' in .gitmodules.使用github page部署失败。
 date: 2024-12-04
 # tags分为Github,前端，python，AI等
 # categories分为code和life以及study
@@ -25,6 +25,8 @@ page:
   - endFlag: "end"
   - toc: true
 ---
+
+
 
 
 
