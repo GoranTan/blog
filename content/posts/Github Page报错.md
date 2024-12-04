@@ -1,11 +1,10 @@
 ---
-title:  解决Error: fatal: No url found for submodule path 'public' in .gitmodules：使用github page部署失败。
+title:  解决Error: fatal: No url found for submodule path 'public' in .gitmodules，使用github page部署失败。
 date: 2024-12-04
 # tags分为Github,前端，python，AI等
 # categories分为code和life以及study
 tags:
   - Github
-  - 前端
 categories:
   - code
 # 进入文章的第一张图
@@ -69,11 +68,43 @@ git rm --cached public
 
 
 
-即使如此，还是报错，这里怀疑是git的本地仓库一直有文件储藏了submodule的信息。尝试直接删除，强制推送
+即使如此，还是报错，这里怀疑是git的本地仓库一直有文件储藏了submodule的信息。尝试直接删除，强制推送。
 
-1. - 清除子模块配置残留（本地）
-     - **检查`.gitmodules`文件**：再次确认`.gitmodules`文件，确保其中已经没有关于`public`、`themes/hugo - theme - reimu`和`themes/hugo - theme - stack`的配置信息。如果还有残留，手动删除这些子模块相关的部分。
-     - **删除本地子模块目录（如果存在）**：使用`rm -rf`命令删除本地仓库中对应的子模块目录。例如：
+在执行 `git add.` 操作时，发现自己忽略的warning可能是报错的原因：Git 检测到你正在将项目内的 `themes/hugo-theme-reimu` 和 `themes/hugo-theme-stack` 这两个本身是 `git` 仓库（也就是嵌入式 `git` 仓库）的目录添加进来。这意味着它们可能不是以正确的子模块形式存在于当前仓库中，而只是单纯作为嵌套的 `git` 仓库被添加，这样会导致一些潜在问题，比如克隆外层仓库时不会包含这些嵌入式仓库的内容，并且也不知道如何获取它们。
+
+```bash
+Administrator@DESKTOP-CADL72R MINGW64 /g/code/github/hugo-FixIt/my-blog (main)
+$ git add .
+warning: adding embedded git repository: themes/hugo-theme-reimu
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> themes/hugo-theme-reimu
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached themes/hugo-theme-reimu
+hint:
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: themes/hugo-theme-stack
+```
+
+而在github action的部署文件中也有一行：
+
+```
+submodules: recursive # Fetch Hugo themes (true OR recursive)
+```
+
+- 在这里`recursive`表示递归地获取子模块。如果项目使用了 Hugo 主题（Hugo themes）并且这些主题是以子模块的形式包含在项目中的，这个设置就会将主题相关的子模块以及这些子模块可能依赖的其他更深层次的子模块（如果有的话）全部获取下来。
+
+
+
+**错误的原因：**我git拉取了好几个hugo的theme，但是只使用了一个，在action配置文件中有一个参数`recursive`表示递归地获取子模块，所以导致每次都会有文件外的submodule找不到url和path。
+
+**解决方法：**删除这两个主题，并且清除子模块配置残留（本地）**删除本地子模块目录（如果存在）**：使用`rm -rf`命令删除本地仓库中对应的子模块目录。例如：
 
 ```plaintext
 rm -rf public
@@ -89,4 +120,5 @@ git config - - remove - section submodule.themes/hugo - theme - reimu
 git config - - remove - section submodule.themes/hugo - theme - stack
 ```
 
-使用`git push - - force`将修改后的历史记录推送到远程仓库。这会覆盖远程仓库的现有历史记录。
+使用`git push - - force`将修改后的历史记录推送到远程仓库，这会覆盖远程仓库的现有历史记录。
+
