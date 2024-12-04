@@ -1,9 +1,4 @@
-
-
- 
-
-```
-
+---
 title:  解决Error: fatal: No url found for submodule path 'public' in .gitmodules：使用github page部署失败。
 date: 2024-12-04
 # tags分为Github,前端，python，AI等
@@ -14,7 +9,7 @@ tags:
 categories:
   - code
 # 进入文章的第一张图
-featuredImage: ""
+featuredImage: "https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204102529533.jpg"
 # 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/
 featuredImagePreview: "https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204120301258.png"
 
@@ -30,9 +25,9 @@ page:
   - readingTime : true
   - endFlag: "end"
   - toc: true
+---
 
 
-```
 
 
 
