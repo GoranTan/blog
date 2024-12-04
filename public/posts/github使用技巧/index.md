@@ -3,7 +3,7 @@
 
 简介：本文分享我作为新手的一些github的使用技巧，分别是如何快速的访问github，如何不进入github实现加速github项目的下载和clone，以及github的项目文档书写规范。
 
-
+&lt;!--more--&gt;
 
 # 1.如何快速的访问github
 

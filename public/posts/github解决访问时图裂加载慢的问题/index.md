@@ -6,6 +6,9 @@
 
 
 问题：**GitHub，解决访问时图裂、加载慢的问题**
+
+&lt;!--more--&gt;
+
 在写markdown文档过程中遇到了github图床展示图片破损的问题。原因：dns污染，解决方法：修改host文件。网上找到两种方法，第一种手动改，这里推荐第二种自动更改。`SwitchHosts`是一个用于快速切换`hosts`文件的开源软件（https://github.com/oldj/SwitchHosts ）
 
 下载后直接正常安装，接着以**管理员身份**打开，点击左下角`&#43;`新建`hosts`，以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：

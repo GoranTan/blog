@@ -3,6 +3,8 @@
 
 # 如何利用浏览器下载网易云版权音乐
 
+&lt;!--more--&gt;
+
 1.在电脑端网易云中打开要下载的音乐，点击分享，复制链接![image-20241203173400416](https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203173400486.png)
 
 

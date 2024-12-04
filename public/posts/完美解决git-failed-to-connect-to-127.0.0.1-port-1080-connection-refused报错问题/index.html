@@ -7,16 +7,18 @@
     <meta name="robots" content="noodp" />
     <title>解决git连接失败的问题 - Goran&#39;s Blog</title><meta name="author" content="Goran">
 <meta name="description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：
-"><meta name="keywords" content='Github'>
+1 git: Failed to connect to 127.0.0.1 port 1080: Connection refused "><meta name="keywords" content='Github'>
   <meta itemprop="name" content="解决git连接失败的问题">
-  <meta itemprop="description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：">
+  <meta itemprop="description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：
+1 git: Failed to connect to 127.0.0.1 port 1080: Connection refused ">
   <meta itemprop="datePublished" content="2024-12-03T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-12-03T00:00:00+00:00">
   <meta itemprop="wordCount" content="37">
   <meta itemprop="keywords" content="Github"><meta property="og:url" content="http://localhost:1313/posts/%E5%AE%8C%E7%BE%8E%E8%A7%A3%E5%86%B3git-failed-to-connect-to-127.0.0.1-port-1080-connection-refused%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/">
   <meta property="og:site_name" content="Goran&#39;s Blog">
   <meta property="og:title" content="解决git连接失败的问题">
-  <meta property="og:description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：">
+  <meta property="og:description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：
+1 git: Failed to connect to 127.0.0.1 port 1080: Connection refused ">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -26,7 +28,8 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="解决git连接失败的问题">
-  <meta name="twitter:description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：">
+  <meta name="twitter:description" content="问题描述在修改git代理后再运行git push -u origin master时出现如下问题：
+1 git: Failed to connect to 127.0.0.1 port 1080: Connection refused ">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -148,8 +151,7 @@
 </span></span><span class="line"><span class="cl">git config --global --unset https.proxy</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个我在终端运行时并没有反映，经尝试后我发现只有在git的仓库位置（初始化的位置）运行才会取消gitconfig中的http.proxy=127.0.0.1:1080或者https.proxy=127.0.0.1:1080。</p>
-<p>我的Git初始化位置在总项目下的，前几次尝试都是在子目录git clone，于是我在主目录运行git config &ndash;list后果然发现存在代理问题（而你在其他位置运行就不会显示这个代理），最后只需要在你git对应的目录下运行以上方法即可成功解决。</p>
-</div><div class="post-footer" id="post-footer">
+<p>我的Git初始化位置在总项目下的，前几次尝试都是在子目录git clone，于是我在主目录运行git config &ndash;list后果然发现存在代理问题（而你在其他位置运行就不会显示这个代理），最后只需要在你git对应的目录下运行以上方法即可成功解决。</p></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">

@@ -36,6 +36,8 @@ page:
 
 使用Github page部署博客，push之后在仓库发生报错，GitHub部署失败，查看details：`Error: fatal: No url found for submodule path 'public' in .gitmodules`，发现是.gitmodules的错误。
 
+<!--more-->
+
 ![image-20241204114907255](https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114907288.png)
 
 ![image-20241204114842445](https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204114842512.png)

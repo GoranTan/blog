@@ -29,6 +29,8 @@ page:
 ## **PaddleOCR 介绍**
 这篇文章呢，将介绍一个新的 Github 项目，同样用于 OCR 识别、该项目名叫 PaddleOCR，是 Paddle 的一个分支；PaddleOCR 基于深度学习技术实现的， 所以使用时需要训练好的权重文件，但这个不需要我们担心，因为官方提供的有~
 
+<!--more-->
+
 项目地址：[github链接](https://github.com/PaddlePaddle/PaddleOCR)
 
 ![](https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203174630956.png)

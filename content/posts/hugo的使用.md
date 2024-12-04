@@ -22,7 +22,6 @@ page:
   - readingTime : true
   - endFlag: "end"
   - toc: true
-
 ---
 
 
@@ -37,13 +36,19 @@ page:
 
 
 
+本文将介绍如何完整的布置一个个人博客，包括本地部署，添加内容，线上部署，自动更新，图床和个性化的设置。
+
+<!--more-->
+
+
+
 # 1.配置自己的初始网站，上传第一个博客。
 
 # 1.1先决条件
 
 在开始本教程之前，你必须：
 
-1. [安装 Hugo](https://gohugo.io/getting-started/installing/)（扩展版，v0.134.1 或更高版本）
+1. [安装 Hugo](https://gohugo.io/getting-started/installing/)（扩展版，v0.134.
 2. [安装 Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 # 1.2创建网站

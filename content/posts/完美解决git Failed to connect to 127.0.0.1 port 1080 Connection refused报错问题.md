@@ -38,6 +38,8 @@ page:
 git: Failed to connect to 127.0.0.1 port 1080: Connection refused
 ```
 
+<!--more-->
+
 # 解决方法
 
 网上有很多解决方法，但我在尝试的时候运行并没有反映。后来经过尝试后发现如何有效地利用这些方法解决这个问题。
