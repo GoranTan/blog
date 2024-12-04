@@ -3,6 +3,7 @@ theme = 'FixIt'
 languageCode = 'en-us'
 title = "Goran's Blog"
 defaultContentLanguage = 'zh-cn'
+# 以下三行是fixit的单独配置
 [markup]
   _merge = "shallow"
 [outputs]

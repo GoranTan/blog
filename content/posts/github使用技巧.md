@@ -1,55 +1,29 @@
 ---
-title: Goran的第一个blog
-subtitle: Github小技巧
-date: 2024-10-29
-#同一类型使用同一type
-type: posts
-draft: false
-
-pageStyle: custom
+title: 我的第一个博客：使用Github的小技巧
+date: 2024-11-03
+# tags分为Github,前端，python，AI等
+# categories分为code和life以及study
+tags:
+  - Github
+categories:
+  - code
+# 进入文章的第一张图
+featuredImage: "https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204091417901.jpg"
+# 还没进入文章的封面图，可在网站自动生成：https://coverview.lruihao.cn/
+featuredImagePreview: "https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241204093206748.png"
 
 author:
   name: Goran
   link: https://github.com/GoranTan
-  email: 
-  avatar: "../assets/touxiang.png"
+  email: "2446040095@qq.com"
+  avatar: "https://gorantan-blog.oss-cn-shanghai.aliyuncs.com/pic/20241203195700868.png"
 
-description: 描述一些常用的Github小技巧
-
-keywords:
-  - Github
-license: 
-comment: false
-weight: 2
-tags:
-  - Github 
-  - accelarate
-categories:
-  - Github
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRelated: false
-hiddenFromFeed: false
-summary: 描述一些常用的Github小技巧
-
-
-toc: true
-math: false
-lightgallery: false
-password: 
-message: 
-
-  
 page:
   - authorAvatar: true
   - wordCount : true
   - readingTime : true
   - endFlag: "end"
   - toc: true
-  # FixIt 0.3.0 | 新增 是否在侧边栏显示集合列表
-  - collectionList : true
-  # FixIt 0.3.0 | 新增 是否在文章末尾显示集合导航
-  - collectionNavigation : true
 ---
 
 简介：本文分享我作为新手的一些github的使用技巧，分别是如何快速的访问github，如何不进入github实现加速github项目的下载和clone，以及github的项目文档书写规范。
@@ -114,11 +88,10 @@ devsidecar是一个github的开源项目，可以实现：dns优选，请求拦�
 - Feedback：[可选][文件]反馈方式。
 
 <!-- 采用 HTML 标签的方法来插入图片
+
 <center><img src="../assets/content.png" width="50%" /></center> -->
 
 <!-- Hugo 官方提供了一些 shortcodes 短代码，其中就包含插入图片的短代码 figure
 <center>{{<figure src="../assets/content.png" width="50%" title="这是一个测试图片，位于assets文件夹下">}}</center> -->
 
 <center>{{<figure src="../assets/content.png" width="100%" title="原文截图">}}</center>
-
-<center>{{<figure src="../assets/OIP-C.jfif" width="100%" title="测试">}}</center>
